@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isabri <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 03:20:54 by isabri            #+#    #+#             */
-/*   Updated: 2021/12/10 22:19:20 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/23 18:23:47 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	*ft_substr(char *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, int start, int len)
 {
-	char				*p;
-	unsigned int		i;
-	unsigned int		j;
+	char	*p;
+	int		i;
+	int		j;
 
 	i = 0;
 	if (!s)
@@ -40,9 +40,9 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	return (p);
 }
 
-size_t	ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (s[i])

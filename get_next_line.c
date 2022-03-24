@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 22:39:01 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/13 17:48:04 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/18 07:23:54 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_gl(char *str)
 		return (NULL);
 	while (str[i] && str[i] != '\n')
 		i++;
-	s = ft_substr(str, 0, i + 1);
+	s = ft_substr(str, 0, i);
 	return (s);
 }
 
