@@ -1,5 +1,5 @@
 NAME = so_long.a
-srcs =	check_map.c\
+SRCS =	check_map.c\
 		draw_map.c\
 		get_fd.c\
 		get_map.c\
@@ -13,15 +13,23 @@ srcs =	check_map.c\
 		read_map.c\
 		
 
-OBJS = $(srcs:%.c=%.o)
+OBJS = $(SRCS:%.c=%.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
+MLX_FLAGS = -lmlx -framework OpenGL -framework Appkit
+
 CC = gcc
 
-NAME = $(OBJS)
+$(NAME) : $(OBJS)
 	ar -rc $(NAME) $(OBJS)
-
+	$(CC) $(CFLAGS) $(MLX_FLAGS) $(SRCS) -o so_long
 all: $(NAME)
 
-clean
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

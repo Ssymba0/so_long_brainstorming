@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:32 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/24 12:11:42 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:34:41 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	moves(int keycode, t_data *data)
 		move_right(data);
 	else if (keycode == 53)
 		destroy_window(data);
-	draw_map(data->img, data->mlx, data->win, data->map);
 	return (0);
 }

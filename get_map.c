@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:11 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/23 18:22:22 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:51:08 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	get_coins(t_map *map)
 			j++;
 		}
 		i++;
-	}	
+	}
 }
 
 void	get_exit(t_map *map)
@@ -96,5 +96,5 @@ void	get_exit(t_map *map)
 			j++;
 		}
 		i++;
-	}	
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:51:58 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/23 17:51:59 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:20:54 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,20 +79,21 @@ int	check_content(t_map *map)
 		{
 			if (map->map[i][j] != 'E' && map->map[i][j] != 'C' \
 			&& map->map[i][j] != '1' \
-			&& map->map[i][j] != '0' && map->map[i][j] != 'P' && \
-			(map->e_occ == 0 || map->p_occ != 1))
+			&& map->map[i][j] != '0' && map->map[i][j] != 'P')
 				return (0);
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	if (map->p_occ == 1 && map->e_occ != 0 && map->c_occ != 0)
+		return (1);
+	return (0);
 }
 
 int	check_map(t_map *map)
 {
-	if (!check_shape(map) || !check_top_bot(map) || \
-	!check_borders(map) || !check_content(map))
-		return (0);
-	return (1);
+	if (check_shape(map) && check_top_bot(map) && \
+	check_borders(map) && check_content(map))
+		return (1);
+	return (0);
 }

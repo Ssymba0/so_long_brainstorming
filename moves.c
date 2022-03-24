@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:34 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/24 12:11:23 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/24 21:49:24 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	move_up(t_data *data)
 			data->map->map[y - 1][x] = 'P';
 			mlx_clear_window(data->mlx, data->win);
 		}
+		draw_map(data->img, data->mlx, data->win, data->map);
 	}
 }
 
@@ -59,6 +60,7 @@ void	move_down(t_data *data)
 			data->map->map[y + 1][x] = 'P';
 			mlx_clear_window(data->mlx, data->win);
 		}
+		draw_map(data->img, data->mlx, data->win, data->map);
 	}
 }
 
@@ -84,6 +86,7 @@ void	move_left(t_data *data)
 			data->map->map[y][x - 1] = 'P';
 			mlx_clear_window(data->mlx, data->win);
 		}
+		draw_map(data->img, data->mlx, data->win, data->map);
 	}
 }
 
@@ -109,6 +112,7 @@ void	move_right(t_data *data)
 			data->map->map[y][x + 1] = 'P';
 			mlx_clear_window(data->mlx, data->win);
 		}
+		draw_map(data->img, data->mlx, data->win, data->map);
 	}
 }
 
