@@ -1,4 +1,4 @@
-NAME = so_long.a
+NAME = so_long
 SRCS =	check_map.c\
 		draw_map.c\
 		get_fd.c\
@@ -22,8 +22,8 @@ MLX_FLAGS = -lmlx -framework OpenGL -framework Appkit
 CC = gcc
 
 $(NAME) : $(OBJS)
-	ar -rc $(NAME) $(OBJS)
-	$(CC) $(CFLAGS) $(MLX_FLAGS) $(SRCS) -o so_long
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJS) ft_printf/libftprintf.a -o so_long
+
 all: $(NAME)
 
 clean:

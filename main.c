@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:28 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/24 13:23:28 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/31 18:53:47 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int ac, char **av)
 	get_map(map, ac, av[1]);
 	if (!check_map(map))
 	{
-		printf("wrong map\n");
+		ft_printf("wrong map\n");
 		exit(0);
 	}
 	init_mlx(&mlx, &img);
@@ -40,7 +40,6 @@ int	main(int ac, char **av)
 	data.win = mlx.win;
 	data.map = map;
 	data.img = &img;
-	system("leaks so_long");
 	mlx_key_hook(data.win, moves, &data);
 	mlx_hook(mlx.win, 17, 0, quit_this, &data);
 	mlx_loop(mlx.mlx);

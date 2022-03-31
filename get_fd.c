@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:08 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/23 18:21:52 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/31 18:54:17 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ int	get_fd(int ac, char *av)
 
 	if (ac != 2)
 	{
-		printf("ERROR\nusage: ./so_long \"map.ber\"\n");
+		ft_printf("ERROR\nusage: ./so_long \"map.ber\"\n");
 		exit(0);
 	}
 	if (!ft_strnstr(av, ".ber"))
 	{
-		printf("ERROR\nusage:./so_long \"map.ber\"\n");
+		ft_printf("ERROR\nusage:./so_long \"map.ber\"\n");
 		exit(EXIT_FAILURE);
 	}
 	fd = open(av, O_RDONLY);

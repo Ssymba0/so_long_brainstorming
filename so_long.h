@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:47 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/23 18:23:59 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/31 18:56:39 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # ifndef IMG_H
 #  define IMG_H 50
 # endif
+# include "ft_printf/ft_printf.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>

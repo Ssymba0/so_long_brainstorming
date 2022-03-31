@@ -6,7 +6,7 @@
 /*   By: isabri <isabri@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 17:52:03 by isabri            #+#    #+#             */
-/*   Updated: 2022/03/24 21:32:21 by isabri           ###   ########.fr       */
+/*   Updated: 2022/03/31 18:54:26 by isabri           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ void	draw_map(t_obj *img, void *mlx, void *win, t_map *map)
 		}
 		i++;
 	}
-	printf("%d\n", map->moves);
+	ft_printf("%d\n", map->moves);
 }
